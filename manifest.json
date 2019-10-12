@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+
+    "name": "Get Comments",
+    "description": "This extension searches online communites(HN, Reddit) and retrieves comments/discussion pages",
+    "version": "1.0.2",
+
+    "browser_action": {
+	"default_icon": "img/icon.png",
+	"default_popup": "popup.html"
+    },
+    "permissions": [
+	"activeTab",
+	"*://www.reddit.com/*"
+    ],
+    "applications": {
+	"gecko": {
+	    "id": "getcomments@example.com"
+	}
+    }
+}
