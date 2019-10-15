@@ -3,7 +3,7 @@
 
     "name": "Get Comments",
     "description": "This extension searches online communites(HN, Reddit) and retrieves comments/discussion pages",
-    "version": "1.0.3",
+    "version": "1.0.4",
 
     "browser_action": {
 	"default_icon": "img/icon.png",
