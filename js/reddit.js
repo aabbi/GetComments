@@ -13,16 +13,20 @@ export class Reddit extends CommentSite{
         return { "q" : link,
 		 "sort": "comments",
 		 "t":"all",
-                 "limit": self.maxHits };	
+                 "limit": this.max_hits };
     }
 
     parse_response(response) {
+	if (Array.isArray(response)) {
+	    response = response[0];
+	}
+	console.log(response.data);
 	if (response && response.data && response.data.children) {
 	    return response.data.children;
 	} else {
 	    return [];
 	}
-    }    
+    }
 
 
     create_pages_from_results(results){
@@ -36,7 +40,6 @@ export class Reddit extends CommentSite{
 		"icon": this.icon
 	    })
 	}
-        return pages;	
+        return pages;
     }
 }
-
